@@ -1,0 +1,38 @@
+[user]
+	name = Ian Lyttle
+	email = ijlyttle@me.com
+[core]
+  	# using name `.gitignore-global` to avoid GNU Stow ignoring
+	excludesFile = ~/.gitignore-global
+[pull]
+	# confront confusion early: https://happygitwithr.com/upstream-changes.html?#sync-option-1-pull-changes-from-upstream-then-push-to-origin
+	# if cannot ff: https://happygitwithr.com/upstream-changes.html#touched-main
+	ff = only
+[init]
+	defaultBranch = main
+
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/
+
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+[core]
+        fsmonitor = true
+        untrackedCache = true
+[merge]
+        # (just 'diff3' if git version < 2.3)
+        conflictstyle = zdiff3 
