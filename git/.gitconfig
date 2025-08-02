@@ -1,6 +1,7 @@
 [user]
 	name = Ian Lyttle
 	email = ijlyttle@me.com
+	signingkey = C6C397D359666C4C
 [core]
   	# using name `.gitignore-global` to avoid GNU Stow ignoring
 	excludesFile = ~/.gitignore-global
@@ -10,6 +11,10 @@
 	ff = only
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
 
 # https://blog.gitbutler.com/how-git-core-devs-configure-git/
 
@@ -36,3 +41,4 @@
 [merge]
         # (just 'diff3' if git version < 2.3)
         conflictstyle = zdiff3 
+
